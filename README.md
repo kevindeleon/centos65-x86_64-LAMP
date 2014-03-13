@@ -30,7 +30,7 @@ sudo service mysqld start
 
 ## A Few Vagrantfile Tweaks I Prefer
 
-If you would like to be able to view content in your host machines browser, I recommend setting your 'forwarded_port' in your Vagrantfile:
+If you would like to be able to view content in your host machine's browser, I recommend setting your 'forwarded_port' in your Vagrantfile:
 
 ```ruby
 config.vm.network "forwarded_port", guest: 80, host: 8080
@@ -40,6 +40,14 @@ I also create a sub-folder on my host machine (in the initialized vagrant direct
 
 ```ruby
 config.vm.synced_folder "html", "/var/www/html"
+```
+
+So, my folder structure on my host machine looks something like:
+```
+-initialized-vagrant-folder/
+---.vagrant/
+---html/
+---Vagrantfile
 ```
 
 Remember, if you make changes to your Vagrantfile while your VM is running, you will need to issue the following command:
