@@ -9,7 +9,9 @@ https://www.virtualbox.org/
 ## Install Vagrant (Requires 1.5+ for Vagrant Cloud)
 http://www.vagrantup.com/
 
-## Setup your new Vagrant box
+## Setup a new Vagrant VM
+We'll be using my shared box on Vagrant Cloud. Vagrant will download the box and initialize your vagrant directory, including a shiny new Vagrantfile
+
 ```
 mkdir your-project-dir && cd your-project-dir
 vagrant init kevindeleon/centos65-x86_64-LAMP
