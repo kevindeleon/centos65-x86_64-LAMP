@@ -44,10 +44,10 @@ config.vm.synced_folder "html", "/var/www/html"
 
 So, my folder structure on my host machine looks something like:
 ```
--initialized-vagrant-folder/
----.vagrant/
----html/
----Vagrantfile
+initialized-vagrant-folder/
+--.vagrant/
+--html/
+--Vagrantfile
 ```
 
 Remember, if you make changes to your Vagrantfile while your VM is running, you will need to issue the following command:
