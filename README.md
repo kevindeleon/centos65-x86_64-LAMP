@@ -34,6 +34,12 @@ If you would like to be able to view content in your host machines browser, I re
 config.vm.network "forwarded_port", guest: 80, host: 8080
 ```
 
+I also create a sub-folder on my host machine (in the initialized vagrant directory) called 'html' and use the sync config in my Vagrantfile to sync it with '/var/www/html' on the guest machine.
+
+```ruby
+config.vm.synced_folder "html", "/var/www/html"
+```
+
 Remember, if you make changes to your Vagrantfile while your VM is running, you will need to issue the following command:
 
 ```
